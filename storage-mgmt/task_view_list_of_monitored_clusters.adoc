@@ -1,0 +1,25 @@
+---
+permalink: storage-mgmt/task_view_list_of_monitored_clusters.html 
+sidebar: sidebar 
+keywords: view, list, monitored, clusters 
+summary: Puede usar la página Cluster Setup para ver el inventario de clústeres. Es posible ver detalles sobre los clústeres, como su nombre, dirección IP y estado de comunicación. 
+---
+= Se muestra la lista de clústeres supervisados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede usar la página Cluster Setup para ver el inventario de clústeres. Es posible ver detalles sobre los clústeres, como su nombre, dirección IP y estado de comunicación.
+
+*Lo que necesitará*
+
+Debe tener el rol de operador, administrador de aplicaciones o administrador de almacenamiento.
+
+.Paso
+. En el panel de navegación izquierdo, haga clic en *Storage Management* > *Cluster Setup*.
++
+Se muestran todos los clústeres del entorno de almacenamiento gestionados por Unified Manager.La lista de clústeres se ordena por la columna de nivel de gravedad de estado de recogida. Puede hacer clic en un encabezado de columna para ordenar los clústeres por columnas diferentes.
+
+

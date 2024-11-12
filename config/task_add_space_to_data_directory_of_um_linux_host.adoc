@@ -1,0 +1,114 @@
+---
+permalink: config/task_add_space_to_data_directory_of_um_linux_host.html 
+sidebar: sidebar 
+keywords: add, space, data directory, linux, host 
+summary: 'Si asignó espacio en disco insuficiente al `/opt/netapp/data` directorio para que sea compatible con Unified Manager cuando configuró originalmente el host Linux y luego instaló Unified Manager, puede añadir espacio en disco después de la instalación aumentando el espacio en disco en el `/opt/netapp/data` directorio.' 
+---
+= Adición de espacio al directorio de datos del host Linux
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si asignó espacio en disco insuficiente al `/opt/netapp/data` directorio para que sea compatible con Unified Manager cuando configuró originalmente el host Linux y luego instaló Unified Manager, puede añadir espacio en disco después de la instalación aumentando el espacio en disco en el `/opt/netapp/data` directorio.
+
+*Lo que necesitará*
+
+Debe tener acceso de usuario raíz a la máquina Red Hat Enterprise Linux o CentOS Linux en la que está instalado Unified Manager.
+
+Le recomendamos que realice un backup de la base de datos de Unified Manager antes de aumentar el tamaño del directorio de datos.
+
+.Pasos
+. Inicie sesión como usuario root en el equipo Linux en el que desea agregar espacio en disco.
+. Detenga el servicio Unified Manager y el software MySQL asociado en el orden que se muestra:
++
+`systemctl stop ocieau ocie mysqld`
+
+. Cree una carpeta de copia de seguridad temporal (por ejemplo, `/backup-data`) con suficiente espacio en disco para contener los datos del directorio actual `/opt/netapp/data`.
+. Copie la configuración de contenido y privilegios del directorio existente `/opt/netapp/data` en el directorio de datos de copia de seguridad:
++
+`cp -arp /opt/netapp/data/* /backup-data`
+
+. Si se Linux está habilitado:
++
+.. Obtenga el tipo SE Linux para las carpetas de la carpeta existente `/opt/netapp/data`:
++
+`se_type= ls -Z /opt/netapp/data | awk '{print $4}' | awk -F: '{print $3}' | head -1`
+
++
+El sistema devuelve una confirmación similar a la siguiente:
+
++
+[listing]
+----
+echo $se_type
+mysqld_db_t
+----
+.. Ejecute el comando chcon para establecer el tipo de Linux se para el directorio de copia de seguridad:
++
+`chcon -R --type=mysqld_db_t /backup-data`
+
+
+
+. Elimine el contenido `/opt/netapp/data` del directorio:
++
+.. `cd /opt/netapp/data`
+.. `rm -rf *`
+
+
+. Expanda el tamaño `/opt/netapp/data` del directorio a un mínimo de 150 GB a través de comandos LVM o agregando discos adicionales.
++
+[NOTE]
+====
+Si ha creado `/opt/netapp/data` desde un disco, no debe intentar montarlo `/opt/netapp/data` como un recurso compartido NFS o CIFS. Porque, en este caso, si intenta expandir el espacio en disco, algunos comandos LVM, `resize` como y `extend` podrían no funcionar como se esperaba.
+
+====
+. Confirme que `/opt/netapp/data` el propietario del directorio (mysql) y el grupo (root) no han cambiado:
++
+`ls -ltr /opt/netapp/ | grep data`
+
++
+El sistema devuelve una confirmación similar a la siguiente:
+
++
+[listing]
+----
+drwxr-xr-x.  17 mysql root  4096 Aug 28 13:08 data
+----
+. Si SE Linux está activado, confirme que el contexto `/opt/netapp/data` del directorio sigue definido en mysqld_db_t:
++
+.. `touch /opt/netapp/data/abc`
+.. `ls -Z /opt/netapp/data/abc`
++
+El sistema devuelve una confirmación similar a la siguiente:
+
++
+[listing]
+----
+-rw-r--r--. root root unconfined_u:object_r:mysqld_db_t:s0 /opt/netapp/data/abc
+----
+
+
+. Elimine el archivo abc de modo que este archivo no provoque un error en la base de datos en el futuro.
+. Vuelva a copiar el contenido de los datos de copia de seguridad en el directorio ampliado `/opt/netapp/data`:
++
+`cp -arp /backup-data/* /opt/netapp/data/`
+
+. Si se Linux está habilitado, ejecute el siguiente comando:
++
+`chcon -R --type=mysqld_db_t /opt/netapp/data`
+
+. Inicie el servicio MySQL:
++
+`systemctl start mysqld`
+
+. Una vez iniciado el servicio MySQL, inicie los servicios ocie y ocieau en el orden que se muestra:
++
+`systemctl start ocie ocieau`
+
+. Una vez iniciados todos los servicios, suprima la carpeta de copia de seguridad `/backup-data` :
++
+`rm -rf /backup-data`
+
+
