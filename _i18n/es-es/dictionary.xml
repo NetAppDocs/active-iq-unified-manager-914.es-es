@@ -5357,7 +5357,6 @@
   <block id="3f49ae06c1af2c81b1e8989e397b26f2" category="paragraph">Indica si el clúster tiene uno o más servidores NTP configurados. Para redundancia y mejor servicio, NetApp recomienda asociar al menos tres servidores NTP al clúster.</block>
   <block id="61aa63eb3ac1c3408640463ee5fe8aa3" category="paragraph">Configurado</block>
   <block id="77b7590086fef2448bd31b90bf127474" category="paragraph">OCSP</block>
-  <block id="17eb499cf93e940dabb77ab4cc167dba" category="paragraph">Indica si hay aplicaciones en ONTAP que no están configuradas con OCSP (protocolo de estado de certificado en línea) y, por lo tanto, las comunicaciones no están cifradas. Se enumeran las aplicaciones no conformes.</block>
   <block id="559944e88ab64748857dfbbb5241e7cb" category="paragraph">Registro de auditoría remota</block>
   <block id="fe81c90ed55ff90f9e976347ff39d039" category="paragraph">Indica si el reenvío de registros (Syslog) está cifrado o no cifrado.</block>
   <block id="07a3a798567f5e260ac46f63e67fd1d1" category="paragraph">Transporte HTTPS AutoSupport</block>
@@ -11970,4 +11969,5 @@
   <block id="2d00b9d7d66bb4524df569339f8a571c" category="sidebar">Corrección o gestión de problemas de ONTAP directamente desde Unified Manager</block>
   <block id="9578fa84ff359de78da764edb1c96f57" category="sidebar">Definiciones de estado de conectividad de clúster</block>
   <block id="baf5d44e1d7facdf126425b9dacabd71" category="sidebar">Definiciones de estado de mirroring de datos</block>
+  <block id="3d937fc01fa5cc206639b1a0a897e80d" category="paragraph">A partir de la versión 9.14.1, Active IQ Unified Manager proporciona información de estado del protocolo de estado de certificados en línea (OCSP) en el nivel de la máquina virtual de almacenamiento (SVM, antes denominada Vserver). Esto significa que la validación OCSP se aplica a todas las conexiones SSL/TLS realizadas a la SVM y garantiza la integridad y la validez de los certificados utilizados en estas conexiones.</block>
 </blocks>
