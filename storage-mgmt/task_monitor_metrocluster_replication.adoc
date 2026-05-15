@@ -29,7 +29,7 @@ En el caso de las configuraciones de MetroCluster over IP, el estado de replicac
 * *Protección* > *Relaciones* > *relación: MetroCluster* vista
 
 
-Para obtener más información, consulte link:../storage-mgmt/task_monitor_metrocluster_configurations.html#monitor-connectivity-issues-in-metrocluster-over-ip["Supervise los problemas de conectividad en MetroCluster por IP"].
+Para más información, consulta link:../storage-mgmt/task_monitor_metrocluster_configurations.html#monitor-connectivity-issues-in-metrocluster-over-ip-configuration["Supervise los problemas de conectividad en MetroCluster por IP"].
 
 
 

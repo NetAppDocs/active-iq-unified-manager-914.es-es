@@ -19,13 +19,9 @@ Puede reiniciar la máquina virtual (VM) de Unified Manager desde la consola de 
 * Debe iniciar sesión en la consola de mantenimiento de Unified Manager como usuario de mantenimiento.
 
 
-También puede reiniciar la máquina virtual desde vSphere mediante la opción VMware *Restart Guest*.
+También puedes reiniciar la máquina virtual desde vSphere usando la opción *Restart Guest* de VMware. Consulta la https://developer.broadcom.com/powercli/latest/vmware.vimautomation.core/commands/restart-vmguest/["Restart-VMGuest cmdlet en la referencia de Broadcom VMware vSphere PowerCLI CMDLET."^]
 
 .Pasos
 . En la consola de mantenimiento, seleccione *Configuración del sistema* > *Reiniciar máquina virtual*.
 . Inicie la interfaz de usuario web de Unified Manager desde el explorador e inicie sesión.
 
-
-*Información relacionada*
-
-https://www.vmware.com/support/developer/PowerCLI/PowerCLI41/html/Restart-VMGuest.html["Referencia de cmdlets de VMware vSphere PowerCLI: Restart-VMGuest"]

@@ -27,7 +27,7 @@ Por ejemplo, descargue `jdk-11.0.18_windows-x64_bin.zip from https://www.oracle.
 
 +
 
-NOTE: Se necesita una cuenta de Oracle para descargar el archivo. Si no tiene una cuenta de Oracle, vaya a link:https://login.oracle.com/mysso/signon.jsp?request_id=007["Inicio de sesión de la cuenta de Oracle"] la página para crear una.
+NOTE: Se necesita una cuenta Oracle para descargar el archivo. Si no tienes una cuenta Oracle, ve a la página link:https://signon.oracle.com/signin["Inicio de sesión de la cuenta de Oracle"^] para crear una.
 
 . Utilice la consola de servicios de Windows para detener los siguientes servicios de Unified Manager:
 +
