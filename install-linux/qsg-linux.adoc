@@ -15,6 +15,7 @@ Puede descargar el paquete de instalación e instalar Unified Manager en una pla
 
 
 
+[[system-requirements]]
 == Requisitos del sistema
 
 * Sistema operativo: Red Hat Enterprise Linux versiones 7.x y de 8,0 a 8,9, o CentOS versión 7.x basada en la arquitectura x86_64, instalado utilizando el entorno base “Servidor con GUI” de la opción *Selección de software* del instalador del sistema operativo
@@ -26,10 +27,12 @@ Para obtener información detallada sobre los requisitos del sistema y sobre la 
 
 
 
+[[installing-active-iq-unified-manager]]
 == Instalando Active IQ Unified Manager
 
 
 
+[[download-the-installer]]
 === Descargue el instalador
 
 . Descargue `ActiveIQUnifiedManager-<version>.zip` el paquete de instalación junto con el certificado de firma de código (`.pem`) y la firma digital (`.sig`) .
@@ -41,6 +44,7 @@ Para obtener información detallada sobre los requisitos del sistema y sobre la 
 
 
 
+[[verify-integrity]]
 === Verifique la integridad
 
 Ejecute los siguientes comandos para verificar la integridad del paquete del instalador:
@@ -51,6 +55,7 @@ Ejecute los siguientes comandos para verificar la integridad del paquete del ins
 
 
 
+[[verify-repository-configuration]]
 === Verificar la configuración de repositorio
 
 Los procedimientos para configurar repositorios de Red Hat Enterprise Linux o CentOS son específicos del sitio. Puede utilizar `pre_install_check.sh` el script incluido en el paquete de instalación para verificar la configuración de su sistema operativo. Si el sistema está conectado a Internet, recibirá automáticamente instrucciones para configurar los repositorios de Red Hat Enterprise Linux o CentOS.
@@ -59,6 +64,7 @@ Los procedimientos para configurar repositorios de Red Hat Enterprise Linux o Ce
 
 
 
+[[install-unified-manager]]
 === Instale Unified Manager
 
 Unified Manager utiliza `yum` la utilidad para instalar el software y cualquier software dependiente. Debido a que hay varias imágenes de Red Hat Enterprise Linux o CentOS, los paquetes instalados dependen del software presente en las imágenes.  `yum`La utilidad determina los paquetes de software dependientes para la instalación. Si necesita más información sobre los paquetes de software dependientes, consulte la link:../install-linux/reference_red_hat_and_centos_software_and_installation_requirements.html["Requisitos de instalación y software Linux"].

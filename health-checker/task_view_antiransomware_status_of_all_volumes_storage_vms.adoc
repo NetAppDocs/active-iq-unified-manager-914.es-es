@@ -21,6 +21,7 @@ Para obtener más información sobre los diferentes estados anti-ransomware, con
 
 
 
+[[view-security-details-of-all-volumes-with-anti-ransomware-detection]]
 == Consulte detalles de seguridad de todos los volúmenes con detección antiransomware
 
 .Pasos
@@ -34,6 +35,7 @@ NOTE: No se admite el ransomware para volúmenes sin conexión, volúmenes restr
 
 
 
+[[view-security-details-of-all-storage-vms-with-anti-ransomware-detection]]
 == Consulte detalles de seguridad de todas las máquinas virtuales de almacenamiento con detección antiransomware
 
 .Pasos

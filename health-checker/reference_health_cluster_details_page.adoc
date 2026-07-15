@@ -17,6 +17,7 @@ El estado junto al nombre del clúster, por ejemplo (bueno), representa el estad
 
 
 
+[[command-buttons]]
 == Botones de comando
 
 Los botones de comando le permiten realizar las siguientes tareas para el clúster seleccionado:
@@ -46,6 +47,7 @@ Permite ir a la vista Estado: Todos los clústeres.
 
 
 
+[[health-tab]]
 == Estado
 
 Muestra información detallada sobre los problemas de disponibilidad de datos y capacidad de datos de diversos objetos del clúster, como nodos, SVM y agregados. Los problemas de disponibilidad están relacionados con la capacidad de servicio de datos de los objetos del clúster. Los problemas de capacidad están relacionados con la funcionalidad de almacenamiento de datos de los objetos del clúster.
@@ -54,6 +56,7 @@ Puede hacer clic en el gráfico de un objeto para ver una lista filtrada de los 
 
 
 
+[[availability-issues]]
 === Problemas de disponibilidad
 
 Muestra gráficamente el número total de objetos, incluidos los que tienen problemas de disponibilidad y los objetos que no tienen problemas relacionados con la disponibilidad. Los colores del gráfico representan los diferentes niveles de gravedad de los problemas. La información que se muestra a continuación del gráfico proporciona detalles sobre problemas de disponibilidad que pueden afectar o ya han afectado a la disponibilidad de los datos del clúster. Por ejemplo, se muestra información acerca de las bandejas de discos inactivas y los agregados que están sin conexión.
@@ -65,18 +68,21 @@ Los datos que se muestran para el gráfico de barra SFO se basan en el estado de
 ====
 
 
+[[capacity-issues]]
 === Problemas de capacidad
 
 Muestra gráficamente la cantidad total de objetos, incluidos los objetos que tienen problemas de capacidad y objetos que no tienen problemas relacionados con la capacidad. Los colores del gráfico representan los diferentes niveles de gravedad de los problemas. La información que se muestra a continuación del gráfico proporciona detalles sobre problemas de capacidad que pueden afectar o ya han afectado a la capacidad de los datos del clúster. Por ejemplo, se muestra información sobre los agregados que probablemente no cumplan los valores de umbral establecidos.
 
 
 
+[[capacity-tab]]
 == Pestaña Capacity
 
 Muestra información detallada sobre la capacidad del clúster seleccionado.
 
 
 
+[[capacity]]
 === Capacidad
 
 Muestra el gráfico de capacidad de datos sobre la capacidad utilizada y la capacidad disponible de todos los agregados asignados:
@@ -109,6 +115,7 @@ Muestra la capacidad que se aprovisiona para todos los volúmenes subyacentes.
 
 
 
+[[details]]
 === Detalles
 
 Muestra información detallada sobre la capacidad utilizada y disponible. El cálculo excluye los datos agregados raíz.
@@ -137,12 +144,14 @@ Muestra la capacidad de almacenamiento posible disponible en todos los discos de
 
 
 
+[[cloud-tier]]
 === Nivel de cloud
 
 Muestra la capacidad total utilizada de los niveles de cloud y la capacidad utilizada para cada nivel de cloud conectado para agregados que admiten FabricPool en el clúster. Un FabricPool puede tener licencia o no tener licencia.
 
 
 
+[[physical-capacity-breakout-by-disk-type]]
 === Interrupción de la capacidad física por tipo de disco
 
 El área Physical Capacity Breakout by Disk Type muestra información detallada acerca de la capacidad de disco de los distintos tipos de discos del clúster. Al hacer clic en el tipo de disco, puede ver más información acerca del tipo de disco en la pestaña Disks.
@@ -179,6 +188,7 @@ Muestra el número de discos sin asignar en el clúster.
 
 
 
+[[aggregates-with-capacity-issues-list]]
 === Agregados con lista de problemas de capacidad
 
 Muestra detalles en formato tabular sobre la capacidad utilizada y la capacidad disponible de los agregados que tienen problemas de riesgo de capacidad.
@@ -218,12 +228,14 @@ Muestra la cantidad estimada de días que quedan antes de que el agregado alcanc
 
 
 
+[[configuration-tab]]
 == Pestaña Configuration
 
 Muestra los detalles sobre el clúster seleccionado, como la dirección IP, el contacto y la ubicación:
 
 
 
+[[cluster-overview]]
 === Descripción general de clúster
 
 * Interfaz de gestión
@@ -258,6 +270,7 @@ Identifica si se trata de un clúster configurado de una cabina All SAN.
 
 
 
+[[remote-cluster-overview]]
 === Información general sobre el clúster remoto
 
 Proporciona detalles sobre el clúster remoto en una configuración de MetroCluster. Esta información solo se muestra para configuraciones MetroCluster.
@@ -278,6 +291,7 @@ Muestra la ubicación del clúster remoto.
 
 
 
+[[metrocluster-overview]]
 === Información general de MetroCluster
 
 Proporciona detalles sobre el clúster local en una configuración de MetroCluster over FC o MetroCluster over IP. Esta información solo se muestra para configuraciones de MetroCluster over FC o IP.
@@ -323,6 +337,7 @@ Muestra el modo de conmutación para la configuración de MetroCluster over IP. 
 
 
 
+[[nodes]]
 === Nodos
 
 * Disponibilidad
@@ -337,6 +352,7 @@ Muestra las versiones de ONTAP que se están ejecutando los nodos y el número d
 
 
 
+[[storage-virtual-machines]]
 === Máquinas virtuales de almacenamiento
 
 * Disponibilidad
@@ -347,6 +363,7 @@ Muestra el número de SVM que están activas (image:../media/availability_up_um6
 
 
 
+[[network-interfaces]]
 === Interfaces de red
 
 * Disponibilidad
@@ -373,6 +390,7 @@ Muestra el número de LIF de interconexión de clústeres.
 
 
 
+[[protocols]]
 === Protocolos
 
 * Protocolos de datos
@@ -383,6 +401,7 @@ Muestra la lista de protocolos de datos con licencia que están habilitados para
 
 
 
+[[protection]]
 === Protección
 
 * Mediadores
@@ -408,12 +427,14 @@ Se muestra cuando el clúster admite mediadores y el mediador está configurado.
 
 
 
+[[cloud-tiers]]
 === Niveles de cloud
 
 Enumera los nombres de los niveles de cloud a los que está conectado el clúster. También incluye el tipo (Amazon S3, Microsoft Azure Cloud, IBM Cloud Object Storage, Google Cloud Storage, Alibaba Cloud Object Storage o StorageGRID) y los estados de los niveles cloud (disponibles o no disponibles).
 
 
 
+[[metrocluster-connectivity-tab]]
 == Pestaña conectividad MetroCluster
 
 Muestra los problemas y el estado de conectividad de los componentes del clúster en la configuración de MetroCluster over FC. Un clúster se muestra en un cuadro rojo cuando el partner de recuperación de desastres del clúster tiene problemas.
@@ -438,6 +459,7 @@ Si el estado del problema de conectividad entre componentes está determinado po
 
 
 
+[[metrocluster-replication-tab]]
 == Pestaña MetroCluster Replication
 
 Muestra el estado de los datos que se están replicando en una configuración de MetroCluster over FC. Puede usar la pestaña replicación de MetroCluster para garantizar la protección de datos mediante el mirroring sincrónico de los datos con clústeres que ya tienen una relación entre iguales. Un clúster se muestra en un cuadro rojo cuando el partner de recuperación de desastres del clúster tiene problemas.
@@ -453,60 +475,70 @@ En la pestaña replicación de MetroCluster, el clúster local proporciona la re
 
 
 
+[[network-interfaces-tab]]
 == Pestaña Network interfaces
 
 Muestra detalles acerca de todas las LIF sin datos que se crean en el clúster seleccionado.
 
 
 
+[[network-interface]]
 === Interfaz de red
 
 Muestra el nombre de la LIF que se crea en el clúster seleccionado.
 
 
 
+[[operational-status]]
 === Estado operativo
 
 Muestra el estado operativo de la interfaz, que puede ser Activo (image:../media/lif_status_up.gif["Icono de estado de LIF: Activo"]), Abajo (image:../media/lif_status_down.gif["Icono de estado de LIF: Inactivo"]) o Desconocido ( )image:../media/hastate_unknown.gif["Icono para el estado de alta disponibilidad: Desconocido"]. El estado operativo de una interfaz de red está determinado por el estado de sus puertos físicos.
 
 
 
+[[administrative-status]]
 === Estado administrativo
 
 Muestra el estado administrativo de la interfaz, que puede ser Activo (image:../media/lif_status_up.gif["Icono de estado de LIF: Activo"]), Abajo (image:../media/lif_status_down.gif["Icono de estado de LIF: Inactivo"]) o Desconocido ( )image:../media/hastate_unknown.gif["Icono para el estado de alta disponibilidad: Desconocido"]. Puede controlar el estado administrativo de una interfaz cuando realice cambios en la configuración o durante el mantenimiento. El estado administrativo puede ser diferente del estado operativo. Sin embargo, si el estado administrativo de una LIF es inactivo, el estado operativo es inactivo de forma predeterminada.
 
 
 
+[[ip-address]]
 === Dirección IP
 
 Muestra la dirección IP de la interfaz.
 
 
 
+[[role]]
 === Función
 
 Muestra el rol de la interfaz. Los roles posibles son las LIF Cluster-Management, las LIF Node-Management, las LIF en clúster y las LIF de interconexión de clústeres.
 
 
 
+[[home-port]]
 === Puerto de inicio
 
 Muestra el puerto físico al que estaba asociada originalmente la interfaz.
 
 
 
+[[current-port]]
 === Puerto actual
 
 Muestra el puerto físico al que está asociada la interfaz actualmente. Tras la migración LIF, el puerto actual puede ser diferente del puerto de inicio.
 
 
 
+[[failover-policy]]
 === Política de conmutación por error
 
 Muestra la política de conmutación por error configurada para la interfaz.
 
 
 
+[[routing-groups]]
 === Grupos de enrutamiento
 
 Muestra el nombre del grupo de enrutamiento. Puede ver más información sobre las rutas y la puerta de enlace de destino haciendo clic en el nombre del grupo de enrutamiento.
@@ -515,18 +547,21 @@ Los grupos de enrutamiento no son compatibles con ONTAP 8.3 o una versión poste
 
 
 
+[[failover-group]]
 === Grupo de recuperación tras fallos
 
 Muestra el nombre del grupo de conmutación por error.
 
 
 
+[[nodes-tab]]
 == Pestaña Nodes
 
 Muestra información sobre los nodos del clúster seleccionado. Puede ver información detallada acerca de las parejas de alta disponibilidad, las bandejas de discos y los puertos:
 
 
 
+[[ha-details]]
 === Detalles de HA
 
 Proporciona una representación gráfica del estado ha y el estado de salud de los nodos del par ha. El estado del nodo se indica con los siguientes colores:
@@ -555,6 +590,7 @@ Si hay clústeres de un solo nodo, también puede ver detalles sobre los nodos.
 
 
 
+[[disk-shelves]]
 === Bandejas de discos
 
 Muestra información acerca de las bandejas de discos de la pareja de ha.
@@ -608,6 +644,7 @@ Muestra la versión del firmware de la bandeja de discos.
 
 
 
+[[ports]]
 === Puertos
 
 Muestra información sobre los puertos FC, FCoE y Ethernet asociados. Puede ver detalles acerca de los puertos y las LIF asociadas haciendo clic en los iconos del puerto.
@@ -647,54 +684,63 @@ Es posible ver los eventos relacionados con el puerto en la lista Events. Tambi�
 
 
 
+[[disks-tab]]
 == Pestaña Disks
 
 Muestra detalles sobre los discos del clúster seleccionado. Es posible ver información relacionada con discos, como el número de discos usados, discos de repuesto, discos rotos y discos sin asignar. También es posible ver otros detalles, como el nombre del disco, el tipo de disco y el nodo de propietario del disco.
 
 
 
+[[disk-pool-summary]]
 === Resumen de pool de discos
 
 Muestra el número de discos clasificados por tipos efectivos (FCAL, SAS, SATA, MSATA, SSD, NVMe SSD, SSD CAP, Array LUN y VMDISK) y el estado de los discos. También puede ver otros detalles, como el número de agregados, discos compartidos, discos de repuesto, discos rotos, discos sin asignar. y discos no compatibles. Si hace clic en el enlace recuento del tipo de disco efectivo, se muestran los discos del estado seleccionado y el tipo efectivo. Por ejemplo, si hace clic en el enlace count para el estado de disco roto y del tipo efectivo SAS, se muestran todos los discos con el estado de disco roto y el tipo efectivo SAS.
 
 
 
+[[disk]]
 === Disco
 
 Muestra el nombre del disco.
 
 
 
+[[raid-groups]]
 === Grupos de RAID
 
 Muestra el nombre del grupo RAID.
 
 
 
+[[owner-node]]
 === Nodo del propietario
 
 Muestra el nombre del nodo al que pertenece el disco. Si el disco no está asignado, en esta columna no se muestra ningún valor.
 
 
 
+[[state]]
 === Estado
 
 Muestra el estado del disco: Agregado, compartido, repuesto, roto, sin asignar, No compatibles o Desconocido. De forma predeterminada, esta columna se ordena para mostrar los estados en el siguiente orden: Roto, sin asignar, no admitido, repuesto, agregado, Y compartidas.
 
 
 
+[[local-disk]]
 === Disco local
 
 Muestra Sí o no para indicar si el disco se encuentra en el clúster local o en el clúster remoto. Esta columna solo se muestra para los clústeres de una configuración de MetroCluster.
 
 
 
+[[position]]
 === Posición
 
 Muestra la posición del disco en función del tipo de contenedor: Por ejemplo, copia, datos o paridad. De forma predeterminada, esta columna está oculta.
 
 
 
+[[impacted-aggregates]]
 === Agregados afectados
 
 Muestra la cantidad de agregados afectados debido al error de disco. Puede mover el puntero por el enlace de recuento para ver los agregados afectados y, a continuación, hacer clic en el nombre del agregado para ver detalles del agregado. También puede hacer clic en el número de agregados para ver la lista de los agregados afectados en la vista Estado: Todos los agregados.
@@ -707,30 +753,35 @@ En esta columna no se muestra ningún valor para los casos siguientes:
 
 
 
+[[storage-pool]]
 === Pool de almacenamiento
 
 Muestra el nombre del pool de almacenamiento al que pertenece el SSD. Es posible mover el puntero por el nombre del pool de almacenamiento para ver detalles del pool de almacenamiento.
 
 
 
+[[storable-capacity]]
 === Capacidad de almacenamiento posible
 
 Muestra la capacidad del disco disponible para su uso.
 
 
 
+[[raw-capacity]]
 === Capacidad bruta
 
 Muestra la capacidad del disco sin formato antes del ajuste de tamaño correcto y la configuración RAID. De forma predeterminada, esta columna está oculta.
 
 
 
+[[type]]
 === Tipo
 
 Muestra los tipos de discos: Por ejemplo, ATA, SATA, FCAL o VMDISK.
 
 
 
+[[effective-type]]
 === Tipo efectivo
 
 Muestra el tipo de disco asignado por ONTAP.
@@ -739,60 +790,70 @@ Algunos tipos de discos ONTAP se consideran equivalentes para crear y añadir ag
 
 
 
+[[spare-blocks-consumed]]
 === % De los bloques de reserva consumidos
 
 Muestra en porcentaje los bloques de reserva que se consumen en el disco SSD. Esta columna está vacía para discos distintos de los discos SSD.
 
 
 
+[[rated-life-used]]
 === % De vida útil estimada utilizada
 
 Muestra en porcentaje una estimación de la vida útil de las unidades SSD utilizadas, según el uso real de las unidades SSD y la predicción del fabricante de la vida útil de las unidades SSD. Un valor mayor de 99 indica que se ha consumido la resistencia estimada, pero no puede indicar un fallo de SSD. Si el valor es desconocido, se omite el disco.
 
 
 
+[[firmware]]
 === Firmware
 
 Muestra la versión del firmware del disco.
 
 
 
+[[rpm]]
 === RPM
 
 Muestra las revoluciones por minuto (RPM) del disco. De forma predeterminada, esta columna está oculta.
 
 
 
+[[model]]
 === Modelo
 
 Muestra el número de modelo del disco. De forma predeterminada, esta columna está oculta.
 
 
 
+[[vendor]]
 === Proveedor
 
 Muestra el nombre del proveedor de discos. De forma predeterminada, esta columna está oculta.
 
 
 
+[[shelf-id]]
 === ID de bandeja
 
 Muestra el ID de la bandeja donde está ubicado el disco.
 
 
 
+[[bay]]
 === Bahía
 
 Muestra el ID de la bahía donde se encuentra el disco.
 
 
 
+[[related-annotations-pane]]
 == Panel Anotaciones relacionadas
 
 Permite ver los detalles de la anotación asociados con el clúster seleccionado. Los detalles incluyen el nombre de la anotación y los valores de anotación que se aplican al clúster. También puede eliminar anotaciones manuales del panel Anotaciones relacionadas.
 
 
 
+[[related-devices-pane]]
 == Panel Related Devices
 
 Permite ver los detalles del dispositivo asociados al clúster seleccionado.
@@ -805,36 +866,42 @@ El panel Related Devices permite ver los nodos, las SVM y los agregados relacion
 
 
 
+[[metrocluster-partner]]
 === Partner de MetroCluster
 
 Muestra el estado del asociado de MetroCluster. El enlace de recuento permite navegar más allá y obtener información acerca del estado y la capacidad de los componentes del clúster.
 
 
 
+[[nodes]]
 === Nodos
 
 Muestra el número, la capacidad y el estado de los nodos que pertenecen al clúster seleccionado. La capacidad indica la capacidad utilizable total sobre la capacidad disponible.
 
 
 
+[[storage-virtual-machines]]
 === Máquinas virtuales de almacenamiento
 
 Muestra el número de SVM que pertenecen al clúster seleccionado.
 
 
 
+[[aggregates]]
 === Agregados
 
 Muestra la cantidad, la capacidad y el estado de los agregados que pertenecen al clúster seleccionado.
 
 
 
+[[related-groups-pane]]
 == Panel Related Groups
 
 Le permite ver la lista de grupos que incluyen el clúster seleccionado.
 
 
 
+[[related-alerts-pane]]
 == Panel Related Alerts
 
 El panel Related Alerts permite ver la lista de alertas del clúster seleccionado. También es posible añadir una alerta si se hace clic en el enlace Add Alert o editar una alerta existente haciendo clic en el nombre de la alerta.
